@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: #ccc;
+}
+
+.container {
+  width: 604px;
+  margin: 50px auto;
+  padding: 1rem;
+  background-color: rgb(250, 161, 161);
+  font-size: 1.4rem;
+  box-shadow: 10px 10px 10px #000;
+  border-radius: 20px 20px 0 0;
+}
+
+h1 {
+  font-size: 50px;
+  border-bottom: 1px solid black;
+  letter-spacing: 1px;
+  /* text-align: center; */
+}
+
+.alert {
+  background-color: red;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li:first-child {
+  border-top: 1px solid black;
+}
+
+li {
+  max-width: 550px;
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+  vertical-align: middle;
+  /* padding: 0.5rem; */
+}
+
+.optionsGoHere {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 2rem;
+  padding: 1rem;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0px 0px 10px #000;
+  /* background-color: #eee; */
+}
+
+.button {
+  width: 300px;
+  height: 2rem;
+  /* padding: 1rem; */
+  /* line-height: 2rem; */
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid black;
+  color: white;
+  background-color: rgb(255, 0, 157);
+  font-weight: bold;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 10px #000;
+}
+
+.complete,
+.delete {
+  float: right;
+  font-size: 1rem;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  height: 35px;
+  width: 35px;
+
+  /* height: 1.4rem; */
+}
+
+.delete {
+  margin-left: 1rem;
+}
+
+.fa-check {
+  /* color: green; */
+  color: black;
+}
+
+.fa-trash {
+  /* color: red; */
+  color: black;
+}
+
+.fa-check,
+.fa-trash {
+  font-size: 1.4rem;
+  /* height: 1.4rem;
+  width: 1.4rem; */
+}
