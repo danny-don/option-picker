@@ -47,6 +47,10 @@ li {
   /* padding: 0.5rem; */
 }
 
+.random-final {
+  background-color: rgb(255, 0, 157) !important;
+}
+
 .optionsGoHere {
   max-height: 150px;
   overflow-y: auto;
