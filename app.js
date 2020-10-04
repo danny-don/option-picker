@@ -1,13 +1,24 @@
+let toDoItemValue = document.getElementById("toDoItem").value;
+if (toDoItemValue == ""){
+  document.getElementById("option").innerText = 
+  "Option are currently empty";
+  document.getElementById("option").classList.add("button1");
+
+}
+
 function addItem() {
   document.getElementById("toDoItem").focus();
   let toDoItemValue = document.getElementById("toDoItem").value;
-
   if (toDoItemValue == "") {
     document.getElementById("message").innerHTML =
       "Error: Please enter an item<br>";
     document.getElementById("message").style = "display:block";
   } else {
     document.getElementById("message").style = "display:none;";
+    document.getElementById("option").classList.remove("button1");
+    document.getElementById("option").classList.add("button");
+    document.getElementById("option").innerText = 
+  "Pick an Option for me";
     let presentListItems = document.getElementById("toDoList").innerHTML;
     let newListItems =
       presentListItems +
