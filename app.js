@@ -20,7 +20,7 @@ function addItem() {
 }
 
 function deleteItem(item) {
-  item.parentElement.remove();
+  item.parentElement.parentElement.removeChild(item.parentElement);
 }
 
 function completeItem(item) {
