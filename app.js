@@ -1,3 +1,5 @@
+let done = [];
+
 function addItem() {
   document.getElementById("toDoItem").focus();
   let toDoItemValue = document.getElementById("toDoItem").value;
@@ -24,10 +26,9 @@ function deleteItem(item) {
 }
 
 function completeItem(item) {
-  let completedItem = item.parentElement.innerHTML;
-  let finished = "<strike>" + completedItem + "</strike>";
-
-  item.parentElement.innerHTML = finished;
+  let completedItem = item.parentElement.innerHTML;  
+  let finished = "<strike id='strike'>" + completedItem + "</strike>";
+  item.parentElement.innerHTML = finished;  
 }
 
 // ============================================================
@@ -240,16 +241,30 @@ let listOfItems = document
   .getElementsByTagName("li");
 
 function random() {
-  let rand = Math.floor(Math.random() * listOfItems.length);
-  console.log("li = " + rand);
-
+  // listOfItems.map((it) => {
+  //   console.log(it.firstChild);
+  // })
+  let done = [];
+  for (let i = 0; i < listOfItems.length; i++) {
+    if (listOfItems[i].firstChild.tagName == "STRIKE") {
+      done.push(i);
+      // listOfItems[i].remove();
+    }
+  }
+  let rand;
+  while (true) {
+    rand = Math.floor(Math.random() * listOfItems.length);
+    console.log("li = " + rand);
+    if (!(done.includes(rand))) {
+      break;
+    }
+  }
   setTimeout(function () {
     listOfItems[rand].style.backgroundColor = "rgb(255, 0, 157)";
   }, 250);
   setTimeout(function () {
     listOfItems[rand].style.backgroundColor = "rgb(250, 161, 161)";
   }, 500);
-
   if (randomNumber - counter == 1) {
     let rand2 = Math.floor(Math.random() * listOfItems.length);
     console.log("randomNumber - counter = " + (randomNumber - counter));
