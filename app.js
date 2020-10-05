@@ -20,7 +20,7 @@ function addItem() {
 }
 
 function deleteItem(item) {
-  item.parentElement.remove();
+  item.parentElement.parentElement.removeChild(item.parentElement);
 }
 
 function completeItem(item) {
@@ -253,7 +253,7 @@ function random() {
   if (randomNumber - counter == 1) {
     let rand2 = Math.floor(Math.random() * listOfItems.length);
     console.log("randomNumber - counter = " + (randomNumber - counter));
-    listOfItems[rand2].style.backgroundColor = "rgb(255, 0, 157)";
+    listOfItems[rand2].classList.add("random-final");
     console.log("rand = " + rand);
     console.log("listOfItems[rand] = " + listOfItems[rand]);
   }
