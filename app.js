@@ -19,6 +19,14 @@ function addItem() {
   }
 }
 
+function addItemWithEnter(event) {
+  const toDoItemValue = document.getElementById("toDoItem").value;
+  if (event.keyCode === 13 && toDoItemValue !== "") {
+    event.preventDefault();
+    addItem();
+  }
+}
+
 function deleteItem(item) {
   item.parentElement.parentElement.removeChild(item.parentElement);
 }

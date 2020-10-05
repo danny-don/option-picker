@@ -27,12 +27,11 @@
           placeholder="Enter an option"
           id="toDoItem"
           class="form-control"
+          onkeypress="addItemWithEnter(event)"
         /><br />
-        <button onclick="addItem()" class="button">
-          Add option
-        </button>
+        <button onclick="addItem()" class="button">Add option</button>
         <br /><br />
-        <div class="alert" id="message" style="display: none;"></div>
+        <div class="alert" id="message" style="display: none"></div>
         <!-- <div class="alert" id="message" style="display: none;"></div> -->
       </div>
       <div class="optionsGoHere">
