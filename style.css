@@ -86,6 +86,19 @@ input[type="text"]:focus {
   box-shadow: 0px 0px 10px #000;
 }
 
+.button1 {
+  width: 300px;
+  height: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid black;
+  color: white;
+  font-weight: bold;
+  color : "white"; 
+  background-color:red; 
+  user-select: none;
+}
+
 .complete,
 .delete {
   float: right;
