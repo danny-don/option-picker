@@ -1,9 +1,11 @@
-let toDoItemValue = document.getElementById("toDoItem").value;
-if (toDoItemValue == ""){
-  document.getElementById("option").innerText = 
-  "Option are currently empty";
-  document.getElementById("option").classList.add("button1");
+// ============================================================
+// TO DO LIST
+// ============================================================
 
+let toDoItemValue = document.getElementById("toDoItem").value;
+if (toDoItemValue == "") {
+  document.getElementById("option").innerText = "Options are currently empty";
+  document.getElementById("option").classList.add("button1");
 }
 
 function addItem() {
@@ -17,8 +19,7 @@ function addItem() {
     document.getElementById("message").style = "display:none;";
     document.getElementById("option").classList.remove("button1");
     document.getElementById("option").classList.add("button");
-    document.getElementById("option").innerText = 
-  "Pick an Option for me";
+    document.getElementById("option").innerText = "Pick an option for me";
     let presentListItems = document.getElementById("toDoList").innerHTML;
     let newListItems =
       presentListItems +
@@ -50,241 +51,139 @@ function completeItem(item) {
 }
 
 // ============================================================
-
-// function random() {
-//   var listOfItems = document
-//     .getElementById("toDoList")
-//     .getElementsByTagName("li");
-
-//   var rand = Math.floor(Math.random() * listOfItems.length);
-//   console.log("li = " + rand);
-
-//   setTimeout(function () {
-//     listOfItems[rand].style.backgroundColor = "yellow";
-//   }, 500);
-//   setTimeout(function () {
-//     listOfItems[rand].style.backgroundColor = "white";
-//   }, 1000);
-// }
-
+// HIGHLIGHT AN OPTION AT RANDOM
 // ============================================================
 
-// function random() {
-//   var listOfItems = document
-//     .getElementById("toDoList")
-//     .getElementsByTagName("li");
-//   console.log(listOfItems);
-//   let randomNumber = Math.floor(Math.random() * 20) + 1;
-//   let a = 0;
-//   for (a = 0; a < randomNumber; a++) {
-//     var rand = Math.floor(Math.random() * listOfItems.length);
-
-//     setTimeout(function () {
-//       listOfItems[rand].style.backgroundColor = "yellow";
-//     }, 500);
-//     setTimeout(function () {
-//       listOfItems[rand].style.backgroundColor = "white";
-//     }, 1000);
-//   }
-// }
-
-// function runTheRandomFunctionARandomAmountOfTimes() {
-//   let randomNumber = Math.floor(Math.random() * 20) + 1;
-
-//   let i = 0;
-//   for (i = 0; i < randomNumber; i++) {
-//     random();
-//   }
-// }
-
-// ============================================================
-
-// function random() {
-//   var listOfItems = document
-//     .getElementById("toDoList")
-//     .getElementsByTagName("li");
-
-//   var rand = Math.floor(Math.random() * listOfItems.length);
-//   console.log("li = " + rand);
-//   for (let a = 0; a < listOfItems.length * 5; a++) {
-//     if (a > listOfItems.length) {
-//       a = 0;
-//     }
-//     setTimeout(function () {
-//       listOfItems[a].style.backgroundColor = "yellow";
-//     }, 500);
-//     setTimeout(function () {
-//       listOfItems[a].style.backgroundColor = "white";
-//     }, 1000);
-//   }
-// }
-
-// function runTheRandomFunctionARandomAmountOfTimes() {
-//   let randomNumber = Math.floor(Math.random() * 20) + 1;
-//   console.log("random number of runs = " + randomNumber);
-//   let i = 0;
-//   for (i = 0; i < randomNumber; i++) {
-//     console.log("i = " + i);
-//     setTimeout(function () {
-//       random();
-//       console.log("random function ran");
-//     }, 1000);
-//   }
-// }
-
-// ============================================================
-
-// function random() {
-//   const listOfItems = document
-//     .getElementById("toDoList")
-//     .getElementsByTagName("li");
-
-//   console.log(listOfItems);
-
-//   let array = [...listOfItems];
-
-//   console.log(array);
-
-//   var rand = Math.floor(Math.random() * listOfItems.length);
-//   console.log("li = " + rand);
-
-//   let time = 250;
-
-//   for (let i = 0; i < listOfItems.length; i++) {
-//     setTimeout(function () {
-//       array[i].style.backgroundColor = "yellow";
-//     }, time);
-//     time = time + 100;
-//   }
-
-// -- -- -- -- -- -- -- -- -- -- -- --
-
-// setTimeout(function () {
-//   listOfItems[rand].style.backgroundColor = "yellow";
-// }, 500);
-// setTimeout(function () {
-//   listOfItems[rand].style.backgroundColor = "white";
-// }, 1000);
-// }
-
-// ============================================================
-
-// function random() {
-//   var listOfItems = document
-//     .getElementById("toDoList")
-//     .getElementsByTagName("li");
-
-//   let randomNumber = Math.floor(Math.random() * 20) + 1;
-//   for (let i = 0; i < randomNumber; i++) {
-//     console.log("randomNumber = " + randomNumber);
-//     var rand = Math.floor(Math.random() * listOfItems.length);
-//     console.log("li = " + rand);
-//     setTimeout(function () {
-//       listOfItems[rand].style.backgroundColor = "yellow";
-//     }, 500);
-//     setTimeout(function () {
-//       listOfItems[rand].style.backgroundColor = "white";
-//     }, 1000);
-//     console.log("i = " + i);
-//   }
-// }
-
-// ============================================================
-
-// function random() {
-//   var listOfItems = document
-//     .getElementById("toDoList")
-//     .getElementsByTagName("li");
-
-//   let array = [...listOfItems];
-
-//   let randomNumber = Math.floor(Math.random() * 20) + 1;
-//   for (let i = 0; i < randomNumber; i++) {
-//     if (i >= randomNumber) {
-//       i == 0;
-//     }
-//     console.log("randomNumber = " + randomNumber);
-//     var rand = Math.floor(Math.random() * array.length);
-//     console.log("li = " + rand);
-//     setTimeout(function () {
-//       array[i].style.backgroundColor = "yellow";
-//     }, 500);
-//     setTimeout(function () {
-//       array[i].style.backgroundColor = "white";
-//     }, 1000);
-//     console.log("i = " + i);
-//   }
-// }
-
-// ============================================================
-
-// function addItem() {
-//   document.getElementById("toDoItem").focus();
-//   let toDoItemValue = document.getElementById("toDoItem").value;
-
-//   if (toDoItemValue == "") {
-//     document.getElementById("message").innerHTML =
-//       "Error: Please enter an item<br>";
-//     document.getElementById("message").style = "display:block";
-//   } else {
-//     document.getElementById("message").style = "display:none;";
-//     let presentListItems = document.getElementById("toDoList").innerHTML;
-//     let newListItems =
-//       presentListItems +
-//       '<li class="list-group-item display-5">' +
-//       toDoItemValue +
-//       ' <button onclick="deleteItem(this)" class="text-danger delete" title="Delete this item"> <span class="fa fa-trash"></span></button><button onclick="completeItem(this)" class="text-success complete" title="Complete this item"><span class="fa fa-check"></span></button></li>';
-//     document.getElementById("toDoList").innerHTML = newListItems;
-//     document.getElementById("toDoItem").value = "";
-//   }
-// }
-
-// function deleteItem(item) {
-//   item.parentElement.remove();
-// }
-
-// function completeItem(item) {
-//   let completedItem = item.parentElement.innerHTML;
-//   let finished = "<strike>" + completedItem + "</strike>";
-
-//   item.parentElement.innerHTML = finished;
-// }
-
-// ============================================================
-
-let randomNumber = Math.floor(Math.random() * 26) + 25;
-let counter = 0;
-let listOfItems = document
-  .getElementById("toDoList")
-  .getElementsByTagName("li");
-
-function random() {
-  let rand = Math.floor(Math.random() * listOfItems.length);
-  console.log("li = " + rand);
-
-  setTimeout(function () {
-    listOfItems[rand].style.backgroundColor = "rgb(255, 0, 157)";
-  }, 250);
-  setTimeout(function () {
-    listOfItems[rand].style.backgroundColor = "rgb(250, 161, 161)";
-  }, 500);
-
-  if (randomNumber - counter == 1) {
-    let rand2 = Math.floor(Math.random() * listOfItems.length);
-    console.log("randomNumber - counter = " + (randomNumber - counter));
-    listOfItems[rand2].classList.add("random-final");
-    console.log("rand = " + rand);
-    console.log("listOfItems[rand] = " + listOfItems[rand]);
-  }
-
-  console.log("randomNumber = " + randomNumber);
-  if (++counter < randomNumber) {
-    console.log("counter = " + counter);
-    console.log("randomNumber = " + randomNumber);
-    runTheRandomFunctionARandomAmountOfTimes();
+function clearPreviousHighlights() {
+  let listOfItemsTwo = Array.from(
+    document.getElementById("toDoList").getElementsByTagName("li")
+  );
+  for (let b = 0; b < listOfItemsTwo.length, b++; ) {
+    listOfItemsTwo[b].style.backgroundColor = "rgb(250, 161, 161)";
+    console.log(listOfItemsTwo[b]);
   }
 }
 
-function runTheRandomFunctionARandomAmountOfTimes() {
-  window.setTimeout(random, 100);
+let counter = 0;
+
+function random() {
+  // gets the list of items the user entered from the to-do list. Stores in 'listOfItems'
+  let listOfItems = Array.from(
+    document.getElementById("toDoList").getElementsByTagName("li")
+  );
+
+  // console.log('list of items = ' + listOfItems);
+
+  let numberOfItems = listOfItems.length;
+  let numberOfTimesToHighlightEachItemMultiplier = 5;
+  let totalHighlights =
+    numberOfItems * numberOfTimesToHighlightEachItemMultiplier;
+  // console.log(totalHighlights);
+
+  // picks a random item index from the to-do list. Stores in 'rand'
+  let rand = Math.floor(Math.random() * listOfItems.length);
+  // console.log("li = " + rand);
+
+  // console.log(listOfItems);
+
+  // generates a random number from 25 to 50 ish? Number is used as the number of times to highlight
+  let randomNumber = Math.floor(Math.random() * 26) + 25;
+
+  let arr = [];
+  // console.log(listOfItems.length * numberOfTimesToHighlightEachItemMultiplier);
+  function generateArrayOfRandomNumbers() {
+    for (
+      let i = 0;
+      i < listOfItems.length * numberOfTimesToHighlightEachItemMultiplier;
+      i++
+    ) {
+      //  if(arr.length < listOfItems.length * 5){
+      arr[i] = Math.floor(Math.random() * listOfItems.length);
+      // console.log(arr);
+    }
+    //  } else {
+    //     i=0;
+    //  }
+  }
+
+  generateArrayOfRandomNumbers();
+
+  for (let a = 0; a < arr.length; a++) {
+    // setTimeout(function () {
+    // listOfItems[arr[a]].style.backgroundColor = "rgb(255, 0, 157)";
+    // }, 250);
+    // setTimeout(function () {
+    //   listOfItems[arr[a]].style.backgroundColor = "rgb(250, 161, 161)";
+    //   }, 500);
+
+    setTimeout(function timer() {
+      listOfItems[arr[a]].style.backgroundColor = "rgb(255, 0, 157)";
+    }, a * 150);
+
+    setTimeout(function timerTwo() {
+      listOfItems[arr[a]].style.backgroundColor = "rgb(250, 161, 161)";
+    }, a * 250);
+  }
+
+  setTimeout(function () {
+    listOfItems[rand].style.backgroundColor = "rgb(0, 255, 55)";
+  }, totalHighlights * 250);
+
+  // if (randomNumber - counter == 1) {
+  //   let rand2 = Math.floor(Math.random() * listOfItems.length);
+  //   console.log("randomNumber - counter = " + (randomNumber - counter));
+  //   listOfItems[rand2].classList.add("random-final");
+  //   console.log("rand = " + rand);
+  //   console.log("listOfItems[rand] = " + listOfItems[rand]);
+  // }
+
+  // console.log("randomNumber = " + randomNumber);
+  // if (++counter < randomNumber) {
+  //   console.log("counter = " + counter);
+  //   console.log("randomNumber = " + randomNumber);
+  // runTheRandomFunctionARandomAmountOfTimes();
+  // }
+
+  // for (let i = 0; i < randomNumber; i++){
+
+  //   console.log(listOfItems.length);
+  // console.log(i);
+
+  //   listOfItems[i].classList.add("random-final");
+  // changes the background-colour of the random item to bright pink after 250ms
+  // setTimeout(function () {
+  // listOfItems[i].style.backgroundColor = "rgb(255, 0, 157)";
+  // }, 250);
+
+  // changes the background-colour of the random item to pale pink after 500ms
+  // setTimeout(function () {
+  //   listOfItems[i].style.backgroundColor = "rgb(250, 161, 161)";
+  // }, 500);
+
+  // if (counter < 5){
+
+  //   setTimeout(function timer() {
+  //     listOfItems[i].style.backgroundColor = "rgb(255, 0, 157)";
+  //   }, i * 250);
+
+  //   setTimeout(function timerTwo() {
+  //     listOfItems[i].style.backgroundColor = "rgb(250, 161, 161)";
+  //   }, i * 300);
+
+  //   if (i > listOfItems.length){
+  //     i = 0;
+  //     counter++;
+  //   }
+  // }
+
+  // }
+}
+
+// function runTheRandomFunctionARandomAmountOfTimes() {
+//   window.setTimeout(random, 100);
+// }
+
+function run() {
+  clearPreviousHighlights();
+  random();
 }

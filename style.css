@@ -11,11 +11,12 @@ body {
 }
 
 .container {
-  width: 604px;
+  width: 654px;
   margin: 50px auto;
   padding: 1rem;
   background-color: rgb(250, 161, 161);
   font-size: 1.4rem;
+  /* line-height: 1.4rem; */
   box-shadow: 10px 10px 10px #000;
   border-radius: 20px 20px 0 0;
 }
@@ -40,10 +41,11 @@ ul li:first-child {
 }
 
 li {
-  max-width: 550px;
+  max-width: 600px;
   border-bottom: 1px solid black;
   transition: 0.4s;
   vertical-align: middle;
+  /* font-size: 1rem; */
   /* padding: 0.5rem; */
 }
 
@@ -52,7 +54,7 @@ li {
 }
 
 .optionsGoHere {
-  max-height: 150px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
@@ -94,9 +96,15 @@ input[type="text"]:focus {
   border: 2px solid black;
   color: white;
   font-weight: bold;
-  color : "white"; 
-  background-color:red; 
+  color: "white";
+  background-color: red;
   user-select: none;
+  cursor: not-allowed;
+}
+
+.button1:hover {
+  box-shadow: 0px 0px 10px #000;
+  cursor: not-allowed;
 }
 
 .complete,
@@ -134,4 +142,10 @@ input[type="text"]:focus {
   font-size: 1.4rem;
   /* height: 1.4rem;
   width: 1.4rem; */
+}
+
+.colour-test {
+  color: rgb(255, 0, 157);
+  background-color: rgb(250, 161, 161);
+  color: rgb(0, 255, 55);
 }
